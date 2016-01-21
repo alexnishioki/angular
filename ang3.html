@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app='App'>
+  <head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+  <script type="text/javascript" src='angular.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>{{ greeting }} World</title>
+  </head>
+  <body ng-controller='Controller2'>
+
+<h1>The array [99,43,22] is {{ [99,43,22].length }} items long.</h1>
+  <h2>-{{3.14159265359}}</h2>
+    <h3>-{{3.14159265359 | currency : "&euro;" }}</h3>
+
+<input ng-model='case'>
+  <h3>{{case | lowercase}}</h3>
+  <h3>{{case | uppercase}}</h3>
+
+<h3>the first {{digits}} numbers in pi.......</h3>
+  <h1> 3{{'.' + hello.pi | limitTo: digits }}</h1>
+    <select ng-model='digits'>
+    <option ng-repeat='digit in [1,2,3,4,5,6,7,8]' value="{{digit}}"> {{digit}} </option>
+    </select>
+
+<h2>How much did you're meal cost?</h2>
+  <input ng-model='total'>
+  <h2>how much did you want to tip?</h2>
+
+  <select ng-model='tips'>
+   <option ng-repeat="tip in [10,15,20]" value='{{tip}}'> {{tip}}%</option>
+ </select>
+    <h2>sub-total: {{total | currency}}</h2>
+    <h3>tip: {{total * tips /100 | currency}}</h3>
+
+  </body>
+</html>

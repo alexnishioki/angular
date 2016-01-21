@@ -1,0 +1,23 @@
+input{
+	display:block;
+	margin:10px;
+	color:red;
+}
+
+form{
+	float:center;
+}
+
+body{
+	padding:10px;
+}
+
+.highlight {
+  color: green;
+}
+
+p{
+	color:red;
+}
+
+

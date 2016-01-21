@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app='App'>
+  <head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+  <script type="text/javascript" src='angular.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href='ang.css'>
+    <title></title>
+  </head>
+   <body ng-init="names=['Harry', 'Ron', 'Hermione', 'Sirius', 'Hedwig', 'Tonks']">
+   <div class='col-md-6'>
+   <ul>
+  <li ng-repeat='name in names'>
+    {{name}}
+   </li>
+</ul>
+
+  <h1 ng-init="symbols=['&spades;', '&clubs;', '&hearts;', '&diams;']">
+    <h3 ng-repeat="symbol in symbols">{{symbol}}</h3>
+  </h1>
+    <h3 ng-repeat="number in [1,1,2,5,6,9,9,9] track by $index">{{number}}</h3>
+    <h1 ng-init="food={'sauce':'gravy','chips':'salsa','peanut':'brittle','creamed':'corn'}"></h1>
+    <h3 ng-repeat="foods in food">{{foods}}</h3>
+  
+  <li>if ng-show is false, angular adds an ng-hide class as the last attribute</li>
+    <div ng-show='3 + 4 == 5'>
+  3 + 4 isn't 5, don't show
+</div>
+<div ng-show='3 + 4 == 7'>
+  3 + 4 is 7, do show
+</div>
+<div ng-hide='3 + 4 == 5'>
+    3 + 4 isn't 5, don't hide
+</div>
+<div ng-hide='3 + 4 == 7'>
+  3 + 4 is 7, do hide
+</div>
+</div>
+
+<div class='col-md-6' ng-controller = 'Controller4'>
+  <h1>Sign up page</h1>
+  <input ng-class="{highlight:{{'secret.length > 5'}}}" type="password" ng-model="secret">
+  <p ng-class="{highlight:{{'secret.length > 5'}}}">Your password is {{secret.length || 0}} character<span ng-show="{{'secret.length !== 1'}}">s</span></p>
+  <button ng-show="{{'secret.length > 5'}}" type="submit" class="btn btn-danger">sign up!</button>
+  <h3 ng-show="{{'secret.length < 5'}}">Password is invalid!</h3>
+</div>
+
+
+  </body>
+</html>

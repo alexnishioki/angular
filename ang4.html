@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app='App'>
+  <head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+  <script type="text/javascript" src='angular.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel='stylesheet' href='ang.css'>
+    <title></title>
+
+    <body ng-controller='Controller3'>
+    	<div class='col-md-6'>
+    	<form>
+    			<fieldset class="form-group">
+    				<label>Boy's Name</label>
+    				<input ng-model='boysName' class="form-control" placeholder="Enter a boy's name...">
+    			</fieldset>
+    			<fieldset class="form-group">
+    				<label>Adjective</label>
+    				<input ng-model='adjOne' class="form-control" placeholder="Enter an adjective...">
+    			</fieldset>
+    			<fieldset class="form-group">
+    				<label>Plural Noun</label>
+    				<input ng-model='pNounOne' class="form-control" placeholder="Enter a plural noun...">
+    			</fieldset>
+    			<fieldset class="form-group">
+    				<label>Plural Noun</label>
+    				<input ng-model='pNounTwo' class="form-control" placeholder="Enter a plural noun...">
+    			</fieldset>
+    			<fieldset class="form-group">
+    				<label>An insect, plural</label>
+    				<input ng-model='insect' class="form-control" placeholder="Enter an insect,plural">
+    			</fieldset>
+    				<label>Plural Noun</label>
+    				<input ng-model='pNounThree' class="form-control" placeholder="Enter a plural noun...">
+    			</fieldset>
+    				<label>A verb ending in "s"</label>
+    				<input ng-model='verb' class="form-control" placeholder="Enter a verb ending in 's'.. ">
+    			</fieldset>
+    			</form>
+    			<button ng-click="show = !show" type="submit" class="btn btn-primary">Generate!</button>
+    			<button ng-click="show = !show" type="submit" class="btn btn-danger">Play again?</button>
+
+    		</div>
+
+    		<div class='col-md-6'>
+    			<h3 ng-show="show">I'm in love with <span>{{boysName}}</span>. He's so <span>{{adjOne}}</span>! He has big flat <span>{{pNounOne}}</span>, and when our <span>{{pNounTwo}}</span> meet, I get <span>{{insect}}</span> in my stomach. I've fallen for him like a ton of <span>{{pNounThree}}</span>, and he <span>{{verb}}</span> for me, too. But I think he's got another girlfriend. What should I do?</h3>   	
+    		</div> 
+  </body>
+</html>

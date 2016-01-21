@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app='App'>
+  <head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+  <script type="text/javascript" src='angular.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>{{ greeting }} World</title>
+  </head>
+  <body ng-controller='Controller'>
+    
+  <input type="text" ng-model="name" placeholder="What is your name?">
+    <p>{{1 + 6}}<p>
+    <br>
+    <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
+    <p>{{ greeting }} world!</p>
+    <h1>my name is: {{ name }}</h1>
+     
+    <select ng-model='animal'>
+    <option ng-repeat="pet in ['cats','dogs','cat-dogs','nothing!']" value="{{pet}}"> {{pet}} </option>
+    </select> 
+  <h1>I enjoy {{ animal }}!</h1>
+  </body>
+
+</html>
